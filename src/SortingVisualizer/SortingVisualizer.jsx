@@ -63,6 +63,8 @@ export class SortingVisualizer extends React.Component{
 
 
     disableSortButtons(){
+        document.getElementById("test5").disabled = true;
+
         document.getElementById("generateNewArray").disabled=true;
         let buttonStyle=document.getElementById("generateNewArray").style;
         buttonStyle.cursor="default";
@@ -97,6 +99,8 @@ export class SortingVisualizer extends React.Component{
     }
 
     restoreSortButtons(){
+        document.getElementById("test5").disabled = false;
+
         document.getElementById("generateNewArray").disabled=false;
         let buttonStyle=document.getElementById("generateNewArray").style;
         buttonStyle.cursor="pointer";
@@ -170,6 +174,7 @@ export class SortingVisualizer extends React.Component{
 
     return (     
     <>
+    <nav className="navbar">
     <p className='range-field' style={{display:'inline-block', width:'25%', marginRight:'20px'}}>
         <label style={{marginRight:'10px'}}>Array Size: </label>
         <input 
@@ -177,34 +182,42 @@ export class SortingVisualizer extends React.Component{
         type="range" 
         id="test5" 
         min="10" 
-        max="300" 
+        max="275" 
+        style={{ width: '75%' }}
         onChange={(e)=>{this.setState({NUMBER_OF_ARRAY_BARS:e.target.value}); 
         this.resetArray(e.target.value);
         }} 
         />
     </p>
 
+
     <button className="custombtn second" id="generateNewArray" style={{ marginRight: '8px' }} onClick={() => this.resetArray(this.state.NUMBER_OF_ARRAY_BARS)}>Generate New Array</button>
     <button className="custombtn second" id="mergeSort" style={{ marginRight: '8px' }} onClick={() => this.sort('mergeSort')}>Merge Sort</button>
     <button className="custombtn second" id="heapSort" style={{ marginRight: '8px' }} onClick={() => this.sort('heapSort')}>Heap Sort</button>
     <button className="custombtn second" id="bubbleSort" style={{ marginRight: '8px' }} onClick={() => this.sort('bubbleSort')}>Bubble Sort</button>
     <button className="custombtn second" id="insertionSort" style={{ marginRight: '8px' }} onClick={() => this.sort('insertionSort')}>Insertion Sort</button>        
-    <button className="custombtn second" id="selectionSort" style={{ marginRight: '8px' }} onClick={() => this.sort('selectionSort')}>Selection Sort</button>
-    <br /><br />
+    <button className="custombtn second" id="selectionSort" style={{ marginRight: '20px' }} onClick={() => this.sort('selectionSort')}>Selection Sort</button>
 
-    <div className="array-container">
+    </nav>
+    <br /><br /><br /><br />
+
+    <div className="array-wrapper">
+  <div className="array-container">
     {array.map((value, idx) => (
-    <div 
-    className="array-bar" 
-    key={idx} 
-    style={{
-        height:`${value}px`,
-        backgroundColor:PRIMARY_COLOR,
-        width:`${this.state.width}px`
-    }}>
-    </div>    
+      <div 
+        className="array-bar" 
+        key={idx} 
+        style={{
+          height: `${value}px`,
+          backgroundColor: PRIMARY_COLOR,
+          width: `${this.state.width}px`
+        }}>
+      </div>    
     ))}
-    </div>
+  </div>
+  </div>
+
+
     </>
     
     );

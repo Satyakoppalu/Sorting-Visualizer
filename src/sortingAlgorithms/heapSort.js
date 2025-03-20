@@ -35,7 +35,7 @@ const heapSort=(mainArray, animations)=>{
 
     for (let i=N-1; i>0;--i){
         animations.push(["swap", i, mainArray[0]]);
-        animations.push(["swap", mainArray[0],i]);
+        animations.push(["swap",0, mainArray[i]]);
         swap(mainArray, i, 0);
         heapify(mainArray, i, 0, animations);
     }

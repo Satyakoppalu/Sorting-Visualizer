@@ -21,7 +21,7 @@
 	font-size: 1rem;
 	line-height: 1;
 	margin: 5px;
-	padding: 1.2em 1.2em;
+	padding: 0.8em 0.8em;
 	text-decoration: none;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -45,3 +45,15 @@
 .second:hover {
 	background-position: 100px;
 }
+
+.navbar {
+	background-color: lightgray; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+  }
