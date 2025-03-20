@@ -1,0 +1,47 @@
+.array-container {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+}
+
+.array-bar {
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.custombtn {
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #e74c3c;
+	border-radius: 0.6em;
+	color: #e74c3c;
+	cursor: pointer;
+
+	align-self: center;
+	font-size: 1rem;
+	line-height: 1;
+	margin: 5px;
+	padding: 1.2em 1.2em;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.custombtn:hover, .btn:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.second {
+  border-radius: 3em;
+  text-align: center;
+	border-color: #1abc9c;
+	color: #fff;
+	background-position: 0 0;
+	background-size: 100%;
+
+}
+
+.second:hover {
+	background-position: 100px;
+}
