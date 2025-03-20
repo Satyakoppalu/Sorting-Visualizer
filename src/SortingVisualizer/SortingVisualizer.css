@@ -1,0 +1,59 @@
+.array-container {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+}
+
+.array-bar {
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.custombtn {
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #e74c3c;
+	border-radius: 0.6em;
+	color: #e74c3c;
+	cursor: pointer;
+
+	align-self: center;
+	font-size: 1rem;
+	line-height: 1;
+	margin: 5px;
+	padding: 0.8em 0.8em;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.custombtn:hover, .btn:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.second {
+  border-radius: 3em;
+  text-align: center;
+	border-color: #1abc9c;
+	color: #fff;
+	background-position: 0 0;
+	background-size: 100%;
+
+}
+
+.second:hover {
+	background-position: 100px;
+}
+
+.navbar {
+	background-color: lightgray; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+  }
