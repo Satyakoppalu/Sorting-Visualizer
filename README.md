@@ -3,7 +3,7 @@ A Sorting Visualizer which visualizes sorting algorithms
 
 ![Demo](demo.gif)
 
-### [LIVE DEMO](https://satyakoppalu.github.io/Sorting-Visualizer/)
+### [LIVE DEMO](https://skoppalu.github.io/Sorting-Visualizer/)
 
 ## Algorithms Implemented
 - Merge Sort
